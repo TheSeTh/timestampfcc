@@ -3,6 +3,7 @@ var app = express();
 var monthNames = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
 ];
+var port = process.env.PORT || 8080;
 
 app.set("views", __dirname + '/views');
 app.set("view engine", "pug");
@@ -29,4 +30,4 @@ app.get('/:data', function(req,res) {
     }
 });
 
-app.listen(8080);
+app.listen(port);
